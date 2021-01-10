@@ -31,6 +31,8 @@ def print_list(results_list):
 
 options=parsing_arguments() #Uncomment for Python3
 # (options,arguments) = parsing_arguments() #Comment for Python3
-scan_result=scan(options.range)
-print_list(scan_result)
-
+if not options.range:
+    print("Please, specify a target -t --target")
+else:
+    scan_result=scan(options.range)
+    print_list(scan_result)
