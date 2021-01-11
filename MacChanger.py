@@ -16,6 +16,7 @@ def parsing_arguments():
 	parser.add_option("-i","--interface",dest="interface",help="Interface to change its MAC address")
 	parser.add_option("-m","--mac",dest="new_mac",help="New Mac Address")
 	return parser.parse_args()
+
 def mac_reader(interface):
 	ifconfig_result=subprocess.check_output(["sudo","ifconfig",interface])
 	mac_address_search_result = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w",ifconfig_result) #Only works in Python2
