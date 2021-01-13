@@ -17,6 +17,7 @@ def chain_delete():
     subprocess.call("sudo iptables --flush",shell=True)
 
 n=0
+print("[+] For Network Cutting, first make sure you're using an ARP Spoofer at the same time")
 while n==0:
     try:
         chain_creation()
