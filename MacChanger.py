@@ -22,7 +22,7 @@ def parsing_arguments():
 
 def mac_reader(interface):
 	ifconfig_result=subprocess.check_output(["sudo","ifconfig",interface])
-	mac_address_search_result = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w",ifconfig_result) #Only works in Python2
+	mac_address_search_result = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w",str(ifconfig_result)) #Only works in Python2
 	if mac_address_search_result:
 		return (mac_address_search_result.group(0))
 	else:
