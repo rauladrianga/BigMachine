@@ -41,8 +41,10 @@ def chain_delete():
     subprocess.call("sudo iptables --flush",shell=True)
 
 n=0
-print("Welcome to File Substituter. Consider using this Script with Python3.6 if issues are present")
-print("[+] For File Substituting, first make sure you're using an ARP Spoofer")
+print("Welcome to File Substituter. Few steps to consider: ")
+print("[+] Use  this Script with Python3.6 if issues are present")
+print("[+] Make sure the file you'll use for substituting is available")
+print("[+] Use an ARP Spoofer first")
 queue_num=8
 while n==0:
 	try:
