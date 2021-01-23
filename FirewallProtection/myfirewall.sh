@@ -5,8 +5,7 @@
 #
 # A firewall script intended to be used on workstations/laptops. It basically
 # blocks most & opens only what is minimally required.
-#
-###############################################################################
+###########################################################################
 
 
 # Absolute paths for helper scripts/commands
